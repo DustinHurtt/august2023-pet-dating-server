@@ -29,7 +29,7 @@ router.post('/create', isAuthenticated, (req, res, next) => {
           expiresIn: "6h",
         })
         
-        res.json(user, authToken);
+        res.json({user, authToken});
     })
     .catch((err) => {
         console.log(err)
